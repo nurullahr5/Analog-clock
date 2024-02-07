@@ -1,0 +1,37 @@
+#bar-second span {
+    position: absolute;
+    transform: rotate(calc(var(--index)* 6deg));
+    inset: -20px;
+    text-align: center;
+}
+#bar-second span p{
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background: #0ef;
+}
+#bar-second span:nth-child(5n) p{
+width: 6px;
+height: 18px;
+transform: translateY(2px);
+border-radius: 2px;
+box-shadow: 0 0 8px #0ef;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    #bar-second span {
+        transform-origin: center;
+    }
+
+    #bar-second span p {
+        width: 1px; /* Adjust width for mobile */
+        height: 8px; /* Adjust height for mobile */
+    }
+
+    #bar-second span:nth-child(5n) p {
+        width: 4px; /* Adjust width for mobile */
+        height: 12px; /* Adjust height for mobile */
+        transform: translateY(1px); /* Adjust translateY for mobile */
+    }
+}

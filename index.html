@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Analog Clock</title>
+        <!-- css insert  -->
+        <link rel="stylesheet" href="output.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="m-0 p-0 box-border flex justify-center items-center min-h-[100vh] bg-slate-900 overflow-hidden">
+
+        <div id="wrapper" 
+        class="relative w-[320px] h-[320px] md:w-[500px] md:h-[500px] rounded-full flex justify-center items-center">
+            <div id="bar-second" class="absolute w-full h-full rounded-full"></div>
+
+            <div id="number-hours" 
+            class="absolute w-full h-full rounded-full">
+                <span id="span" 
+                style="position: absolute; transform: rotate(calc(var(--index)* 30deg)); inset: 6px; text-align: center;">
+                    <p id="p" class="text-[45px] md:text-[52px]"
+                    style="transform: rotate(calc(var(--index)* -30deg)); color: #0ef; text-shadow: 0 0 8px #0ef;"></p>
+                </span>
+            </div>
+
+            <div id="hand-box" 
+                class="relative justify-center items-center flex">
+                <div id="hand-hour" class="absolute rounded-full w-[150px] h-[150px] md:w-[300px] md:h-[300px] flex justify-center">
+                    <i class="w-[12px] h-[75px] md:h-[150px] bg-[#0ef] inline-block origin-bottom rounded-[50%]"></i>
+                </div>
+                <div id="hand-minute" class="absolute rounded-full w-[240px] h-[240px] md:w-[420px] md:h-[420px]  flex justify-center before:content-[''] before:absolute before:top-[50%] before:translate-y-[-50%] before:w-[25px] before:h-[25px] before:bg-[#0ef] before:rounded-[50%] before:shadow-sm">
+                    <i class="inline-block w-[8px] h-[120px] md:h-[210px] bg-[#0ef] origin-bottom rounded-[50%]"></i>
+                </div>
+                <div id="hand-second" class="absolute rounded-fullv w-[340px] h-[340px] md:w-[480px] md:h-[480px] flex justify-center before:content-[''] before:absolute before:top-[50%] before:translate-y-[-50%] before:w-[20px] before:h-[20px] before:bg-white before:rounded-[50%] before:shadow-sm">
+                    <i class="inline-block w-[4px] bg-white origin-bottom rounded-[50%] h-[200px] md:h-[310px]"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="NRcode.js"></script>
+</html>
