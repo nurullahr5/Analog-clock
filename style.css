@@ -22,6 +22,14 @@ box-shadow: 0 0 8px #0ef;
     font-size: 50px;
     margin-top: -190px;
 }
+#wrapper{
+    animation: colorful 30s linear infinite;
+}
+@keyframes colorful{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
